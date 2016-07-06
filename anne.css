@@ -1,0 +1,412 @@
+/*$background: #ffff;
+$header-back: #eeeeee;*/
+
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  background-color: #fff;
+  font-family: Monosapce;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  width: 100%;
+  height: 100%;
+  vertical-align: baseline;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+h1,h2,h3,h4{
+  margin: 0;
+}
+p{
+  font-size: 18px;
+  color: #41444B;
+  text-align: justify;
+  line-height: 28px;
+}
+
+.container{
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1280px;
+}
+.nav_default {
+  height: 50px;
+  top:0px;
+  z-index: 999;
+  line-height: 50px;
+  position: fixed;
+  width: 100%;
+  color: white;
+  background-color: transparent;
+  border-bottom: 1px solid #eeeeee;
+}
+.header_highlight{
+  color: #769FCD;
+  background-color: white;
+  opacity: 0.8;
+  border-bottom: 1px solid #769FCD;
+}
+#header h1{
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
+#nav {
+  position: absolute;
+  right: 0;
+  height: 50px;
+  top: 0px;
+}
+#nav ul{
+  margin: 0;
+}
+#nav ul li{
+  list-style: none; 
+  float: left;
+  display: block-inline;
+}
+
+.page-scroll {
+  display: block;
+  padding: 0 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color:white;
+}
+.nav_highlight{
+  color: #769FCD;
+}
+/*slide show*/
+#slidershow{
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.slide{
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  top:0px;
+  margin: 0 0;
+}
+.slide li{
+  position: absolute;
+  top:0px;
+  width:100%;
+  height: 100%;
+  list-style: none;
+}
+.slide li>span{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  color: transparent;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: none;
+  z-index: 0;
+}
+.slide li>div{
+  z-index: 2;
+  position: absolute;
+  bottom: 60px;
+  left: 30px;
+  width: 100%;
+  text-align: left;
+  color: white;
+}
+.pre-next button{
+  width: 40px;
+  height: 40px;  
+  position: absolute;
+  border: 1px solid #eeeeee;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  z-index: 100;
+}
+.pre-next button:hover{
+  background-color: gray;
+}
+.pre-next button:nth-child(1){
+  left: 10px;
+  top: 50%;
+}
+.pre-next button:last-child{
+  right: 10px;
+  top: 50%;
+}
+.pre-next button>span{
+    font-size: 30px;
+    color: #eeeeee;
+}
+.slide li>div h1{
+  line-height: 200px;
+  color: white;
+  font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
+  font-size: 200px;
+  padding: 0;
+  z-index: 1;
+}
+
+.slide li:nth-child(1)>span{
+  background-image: url(http://images-cdn.moviepilot.com/images/c_fill,h_1080,w_1920/t_mp_quality/iwbf2ml47ho9irqeeyff/the-intern-633931.jpg);
+}
+.slide li:nth-child(2)>span{
+  background-image: url(http://img.ivsky.com/img/bizhi/img/201202/22/anne_hathaway-006.jpg);
+}
+.slide li:nth-child(3)>span{
+  background-image: url(http://v3wall.com/wallpaper/1920_1080/1007/1920_1080_20100724103445322683.jpg);
+}
+
+.donts{
+  width: 40%;
+  bottom: 40px;
+  text-align: center;
+  position: relative;
+  margin: 0 auto;
+  z-index: 100;
+}
+.donts li{
+  list-style: none;
+  display: inline-block;
+}
+.donts li>button{
+  background-color: transparent;
+  border: 1px solid #eeeeee;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  margin: 10px;
+  cursor: pointer;
+}
+.donts li>button.active{
+  background-color: gray;
+}
+
+section{
+  height: auto;
+  position: relative;
+  padding: 40px 5%;
+}
+.content{
+  padding-top: 20px;
+}
+#about,#films{
+  background-color: #F7FBFC;
+}
+.subtitle{
+  text-align: center;
+}
+.subtitle h1{
+  color: #769FCD;
+  font-family: cursive;
+  font-size: 40px;
+}
+.timeline{
+  list-style: none;
+  position: relative;
+  padding: 20px 0 20px;
+}
+  .timeline:before{
+    content: ' ';
+    width: 1px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 15%;
+    margin-left: 2px;
+    background-color: #A7CBD9;
+  }
+  .timeline li{
+    position: relative;
+    margin-bottom: 40px;
+  }
+    .timeline > li:before,
+    .timeline > li:after {
+          content: " ";
+          display: table;
+    }
+
+    .timeline > li:after {
+        clear: both;
+    }
+
+    .timeline li .timeline-badge{
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 2px solid #A7CBD9;
+      position: absolute;
+      left: 15%;
+      margin-left: -20px;
+      z-index: 100;
+      text-align: center;
+      font-size: 25px;
+      line-height: 40px;
+      color: #7E94BF;
+      background-color: white;
+    }
+    .timeline li .timeline-panel{
+      position: relative;
+      width: 70%;
+      margin-left: 22%;
+      border: 1px solid #B9D7EA;
+      padding: 10px;
+      border-radius: 5px;
+      background-color: #F7FBFC;
+    } 
+    .timeline li .timeline-panel:before{
+      position: absolute;
+      left: -15px;
+      display: inline-block;
+      border-top: 15px solid transparent;
+      border-left: 0 solid #B9D7EA;
+      border-right: 15px solid #B9D7EA;
+      border-bottom: 15px solid transparent;
+      content: " ";
+    }
+    .timeline-panel .timeline-heading h3{
+      color: #7E94BF;
+    }
+    .timeline-panel .timeline-heading{
+      padding-left: 15px;
+      padding-top: 15px;
+    }
+    .timeline-panel .timeline-body{
+      padding: 15px;
+    }
+    .timeline li .timeline-panel:after{
+      position: absolute;
+      left: -14px;
+      top:10px;
+      display: inline-block;
+      border-top: 14px solid transparent;
+      border-left: 0 solid #F7FBFC;
+      border-right: 14px solid #F7FBFC;
+      border-bottom: 14px solid transparent;
+      content: " ";
+    }
+#films ul li{
+  padding: 5px 0;
+  list-style: none;
+  font-size: 18px;
+}
+#films a, #awards a, #films h2{
+  padding-left: 40px;
+  color: #7E94BF;
+}
+#awards{
+  padding-bottom: 100px;
+}
+#awards .content{
+  
+}
+#awards .award_list{
+  position: relative;
+  width: 60%;
+  display: inline-block;
+  padding: 0 20px;
+}
+.award_list ul li{
+  padding: 5px 0;
+  font-size: 18px;
+}
+#awards .content img{
+  position: relative;
+  display: inline-block;
+  width: 30%;
+  max-width: 500px;
+  padding: 10px;
+  border: 1px solid #7E94BF;
+  vertical-align: top;
+  margin-top: 25px;
+}
+
+@media (max-width: 768px){
+  .nav_default {
+    color: #769FCD;
+    background-color: white;
+    opacity: 0.8;
+    border-bottom: 1px solid #769FCD;
+  }
+  #header h1{
+    padding-left: 3%;
+  }
+  .nav-icon:before{
+    content: '\2630';
+    top: -35px;
+    line-height: 25px;
+    right: 3%;
+    position: absolute;
+    font-size: 1.4em;
+    cursor: pointer;
+  }
+  #nav {
+    width: 100%;
+    top: 50px;
+  }
+  #nav ul{
+    background-color: #769FCD;
+    margin: 0 0;
+    padding: 0px 5px;
+  }
+  #nav ul.hidden{
+    display: none;
+  }
+  #nav ul li{
+    float:none;
+  }
+  .page-scroll{
+    padding: 10px 3%;
+    line-height: 20px;
+    border-top: 1px solid #fff;
+    color: white;
+  }
+  .slide li>div h1{
+    font-size: 38px;
+  }
+  .timeline li .timeline-panel{
+    margin-left: 25%;
+  }
+  #awards .content img{
+    display: none;
+  }
+  #awards .award_list{
+    width: 100%;
+  }
+  @media (max-width:448px){
+      .subtitle h1{
+        font-size: 30px;
+      }
+      .timeline:before, .timeline li .timeline-badge{
+        left:5%;
+      }
+     .timeline li .timeline-panel{
+      margin-left: 18%;
+      width: 75%;
+    }
+    .content{
+      padding: 0;
+    }
+    #films .content{
+      padding-top: 20px;
+    }
+    #films h2{
+      font-size: 20px;
+      padding-left: 0px;
+    }
+    #films ul{
+      padding-left: 0px;
+    }
+    #awards .award_list{
+      padding: 0px;
+    }
+  }
+}
